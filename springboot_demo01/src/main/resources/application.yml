@@ -1,0 +1,6 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /jt # 项目发布路径信息 默认条件下为 / (根目录)
+    # tomcat 服务器默认发布路径地址为 webapps 目录下
+    #
