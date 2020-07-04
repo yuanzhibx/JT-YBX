@@ -18,10 +18,27 @@ public class TestMybatis {
     @Autowired
     private UserMapper userMapper;
 
+    /**
+     * MyBatis 方式查询所有数据
+     */
     @Test
     void findAll() {
         List<User> list = userMapper.findAll();
-        System.out.println(list);
+        for (User user : list) {
+            System.out.println(user);
+        }
+    }
+
+    /**
+     * MyBatisPlus 方式查询所有数据
+     * 单表操作可不写 SQL 语句
+     */
+    @Test
+    void findAllMP() {
+        List<User> list = userMapper.selectList(null);
+        for (User user : list) {
+            System.out.println(user);
+        }
     }
 
 }

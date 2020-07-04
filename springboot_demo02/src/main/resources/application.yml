@@ -2,6 +2,8 @@ server:
   port: 8090
   servlet:
     context-path: /
+
+# spring
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -9,7 +11,8 @@ spring:
     username: root
     password: root
 
-mybatis:
+# 引入 MyaBatis Plus 配置
+mybatis-plus:
   # 定义别名包
   type-aliases-package: com.jt.pojo
   # 添加映射文件
@@ -17,3 +20,9 @@ mybatis:
   # 开启驼峰映射 (例如: 将数据库中 user_id 字段转换为 userId)
   configuration:
     map-underscore-to-camel-case: true
+
+# 添加日志
+logging:
+  level:
+    # mybatis 指定 mapper 接口, 以 debug 方式显示日志
+    com.jt.mapper: debug
