@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 通过 yml 配置文件赋值
+ *
  * @author Yuanzhibx
  * @Date 2020-07-03
  */

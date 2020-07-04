@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 通过 properties 配置文件赋值
  * 常用注解
  * @PropertySource()
  *      value = 配置文件的加载路径,
@@ -18,9 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 @PropertySource(value = "classpath:/properties/msg.properties", encoding = "UTF-8")
 public class MsgController2 {
 
-    @Value("${msg.username}")
+    @Value("${msg.username2}")
     private String username;
-    @Value("${msg.age}")
+    @Value("${msg.age2}")
     private Integer age;
 
     @RequestMapping("/getMsg2")
