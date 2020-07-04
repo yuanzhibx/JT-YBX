@@ -1,0 +1,19 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: root
+
+mybatis:
+  # 定义别名包
+  type-aliases-package: com.jt.pojo
+  # 添加映射文件
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  # 开启驼峰映射 (例如: 将数据库中 user_id 字段转换为 userId)
+  configuration:
+    map-underscore-to-camel-case: true
