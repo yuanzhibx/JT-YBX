@@ -3,4 +3,10 @@ server:
   servlet:
     context-path: /jt # 项目发布路径信息 默认条件下为 / (根目录)
     # tomcat 服务器默认发布路径地址为 webapps 目录下
-    #
+    # /     ROOT 项目路径
+    # /jt   JT   项目路径
+
+# 指定用户配置文件信息
+msg:
+  username: yuanzhibx
+  age: 13
