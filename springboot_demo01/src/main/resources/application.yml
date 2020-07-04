@@ -1,7 +1,7 @@
 # 指定默认的环境策略
 spring:
   profiles:
-    active: test
+    active: prod
 
 --- # 表示配置文件环境的分割
 server:
