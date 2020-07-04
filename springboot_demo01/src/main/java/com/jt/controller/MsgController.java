@@ -1,5 +1,9 @@
 package com.jt.controller;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,12 +11,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 通过 yml 配置文件赋值
+ * SpringBoot 注解
+ * @RestController
+ * @ConfigurationProperties(prefix = "msg") 通过 yml 为属性动态赋值, 绑定 msg
+ *
+ * Lombok 注解
+ * @Accessors           开启链式加载结构
+ * @Data                自动生成 get / set / ...
+ * @Accessors(chain = true) 无参构造
+ * @NoArgsConstructor   无参构造
+ * @AllArgsConstructor  全参构造
  *
  * @author Yuanzhibx
  * @Date 2020-07-03
  */
 @RestController
 @ConfigurationProperties(prefix = "msg")
+@Data
+@Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class MsgController {
 
     /**
@@ -30,22 +48,6 @@ public class MsgController {
      */
     private String username;
     private Integer age;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     @RequestMapping("/getMsg")
     public String getMsg() {

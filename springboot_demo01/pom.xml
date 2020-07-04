@@ -44,7 +44,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-        <!--引入插件lombok 自动的set/get/构造方法插件 -->
+        <!--引入插件lombok 自动的set / get / 构造方法插件 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
