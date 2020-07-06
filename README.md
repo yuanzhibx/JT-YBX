@@ -6,10 +6,13 @@
 ## 项目结构
 - [springboot_demo01](./springboot_demo01): SpringBoot 加强 & 常用注解
 - [springboot_demo02](./springboot_demo02): MyBatis Plus
+- [springboot_demo03](./springboot_demo03): SpringBoot & JSP
 
 ```
 ├─springboot_demo01
-└─springboot_demo02
+├─springboot_demo02
+└─springboot_demo03
+   └─webapp
 ```
 ---
 ## 联系
